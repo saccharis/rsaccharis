@@ -13,6 +13,7 @@ source:
   sha256: {{ filehash|lower}}
 
 build:
+  noarch: generic
   number: {{ build_number }}
   rpaths:
     - lib/R/lib/
