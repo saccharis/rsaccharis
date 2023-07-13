@@ -12,7 +12,8 @@
 #'
 #' @export
 
-B_plots_all <- function() {
+B_plots_all <- function(out_dir=getwd() {
+  setwd(out_dir)
   #### basic tree ####
   p=ggtree(myTREE, layout="circular", size=0.5) +
     geom_tiplab(size=1.5, color="black") +

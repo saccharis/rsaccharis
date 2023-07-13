@@ -20,9 +20,12 @@ build:
     - lib/
 
 requirements:
+  buikd:
+    - numpy >=1.17
   host:
     - r-base
   run:
+    - numpy >=1.17
     - r-base
     - r-jsonlite
     - r-ape
