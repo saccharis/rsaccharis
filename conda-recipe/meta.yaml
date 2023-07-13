@@ -20,7 +20,7 @@ build:
     - lib/
 
 requirements:
-  buikd:
+  build:
     - numpy >=1.17
   host:
     - r-base
