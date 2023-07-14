@@ -12,7 +12,7 @@
 #'
 #' @export
 
-B_plots_all <- function(out_dir=getwd() {
+B_plots_all <- function(out_dir=getwd()) {
   setwd(out_dir)
   #### basic tree ####
   p=ggtree(myTREE, layout="circular", size=0.5) +

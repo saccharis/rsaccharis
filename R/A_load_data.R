@@ -22,22 +22,24 @@
 #' @export
 #'
 
-A_load_data <- function(){
+A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   #### load JSON metadata file
-
-  cazy_data = readline(prompt = "Enter the name of your SACCHARIS JSON file: ")
-  cazy_json <<- jsonlite::fromJSON(cazy_data) # reads in json file
-
-  Cazy_table_edited = as.data.frame(do.call(rbind, cazy_json)) # assigns the json file to a data frame
+  if (is.null(json_file)) {
+    json_file <- readline(prompt = "Enter the name of your SACCHARIS JSON file: ")
+  }
+  cazy_json <<- jsonlite::fromJSON(json_file) # reads in json file
+  Cazy_table_edited <- as.data.frame(do.call(rbind, cazy_json)) # assigns the json file to a data frame
   Cazy_table_edited$genbank <- rownames(Cazy_table_edited) # this retains the multiple-domain assignments to the genbank ID
 
   #### load metadata ####
 
   # load the tree file, and plot/annotate based on the metadata data frame
-  tree_name = readline(prompt = "Enter the name of your SACCHARIS tree file: ")
+  if (is.null(tree_name)) {
+    tree_name <- readline(prompt = "Enter the name of your SACCHARIS tree file: ")
+  }
   myTREE <<- ape::read.tree(file = tree_name)    # get node names
   tree_tip_names <<- myTREE$tip.label    # get tip names from the tree
-  tree_tip_names=as.matrix(tree_tip_names)
+  tree_tip_names <- as.matrix(tree_tip_names)
   colnames(tree_tip_names)="genbank"
 
   # merge CAZY and tree file by GenBank numbers
@@ -70,6 +72,9 @@ A_load_data <- function(){
   final_ord$module_end=Cazy_table_edited_order$module_end
 
   # output a .csv file that includes all the metadata but also includes tree ID
+  if (!is.null(out_dir)) {
+    setwd(out_dir)
+  }
   write.csv(final_ord, file=sprintf(paste("CAZY_TABLE_FINAL_%s_", currentDate, ".csv", sep=""), substr(tree_name,1,nchar(tree_name)-5)), row.names = TRUE)
 
   # for loop to copy from cazy final to tip names

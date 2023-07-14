@@ -1,2 +1,6 @@
 /.idea/
 /rsaccharis.iml
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata

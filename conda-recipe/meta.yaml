@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
   {% set name = "rsaccharis" %}
   {% set build_number = 0%}
   {% set filehash = "B2CB7E73AF374A68C9D955FC8BED8AD67A1DE96A262220F4DC7CBC0C73F86E7A"%}
@@ -20,12 +20,9 @@ build:
     - lib/
 
 requirements:
-  build:
-    - numpy >=1.17
   host:
     - r-base
   run:
-    - numpy >=1.17
     - r-base
     - r-jsonlite
     - r-ape
@@ -42,6 +39,7 @@ requirements:
 test:
   commands:
     - '$R "'
+
 about:
   home: 'https://github.com/saccharis/rsaccharis'
   license: 'GPL 3'
