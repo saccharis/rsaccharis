@@ -4,3 +4,4 @@
 \.idea*
 ^rsaccharis\.iml$
 ^conda-recipe$
+^MAINTENANCE.md$
