@@ -4,10 +4,14 @@
 \alias{A_load_data}
 \title{Load Data Files}
 \usage{
-A_load_data()
+A_load_data(json_file = NULL, tree_name = NULL, out_dir = NULL)
 }
 \arguments{
-\item{...}{Prompted text entry of .tree file name (SACCHARIS output).}
+\item{json_file}{Argument for text filepath to metadata .json file name (SACCHARIS output). If not given, user is prompted for text entry of metadata .json file name instead.}
+
+\item{tree_name}{Argument for text filepath to .tree file name (SACCHARIS output). If not given, user is prompted for text entry of .tree file name instead.}
+
+\item{out_dir}{Argument for text folderpath output CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx to.}
 }
 \value{
 CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx. Exported data table containing information from cazy.org for each sequence.
@@ -16,7 +20,12 @@ CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx. Exported data table containing in
 Loading files required for plotting annotated trees generated from SACCAHRIS v2, and sorts data frames to order them based on tree nodes.
 }
 \examples{
+\dontrun{
 A_load_data()
 test_data.json
 GH16_characterized.tree
+}
+\dontrun{
+A_load_data("PL9_CHARACTERIZED_ALL_DOMAINS.json", "PL9_CHARACTERIZED_ALL_DOMAINS_FASTTREE.tree")
+}
 }

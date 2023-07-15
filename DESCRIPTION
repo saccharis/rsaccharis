@@ -11,9 +11,8 @@ Maintainer: Greta Reintjes <greta.reintjes@mpi-bremen.de>, Kristin Low <kristin.
 Description: This package will use metadata .json and .tree files output from SACCHARIS v2 to generate annotated phylogenetic tree PDF files.
     Highly customizable, as the formatting of the tree is done using ggplot2. Of course plotting functions can easily be manipulated as desired.
     To use, call A_load_data() and B_plots_all() and follow prompts. Our default plots used for publication are domain_ECno_numeric.
-License: GNU General Public License v3.
 Encoding: UTF-8
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 Imports: jsonlite, ape, stringr, magicfor, knitr, dplyr, magrittr,
         RColorBrewer, ggnewscale, ggplot2, ggtree
 NeedsCompilation: no
@@ -22,3 +21,4 @@ Author: Greta Reintjes [aut, cre] (<https://orcid.org/0000-0001-7085-4683>),
   Kristin Low [aut] (<https://orcid.org/0000-0003-1093-0044>),
   Jeff Tingley [aut],
   Alex Fraser [ctb]
+License: GPL (>= 3)

@@ -2,8 +2,9 @@
 #'
 #' @description Loading files required for plotting annotated trees generated from SACCAHRIS v2, and sorts data frames to order them based on tree nodes.
 #'
-#' @param ... Prompted text entry of metadata .json file name (SACCHARIS output).
-#' @param ... Prompted text entry of .tree file name (SACCHARIS output).
+#' @param json_file Argument for text filepath to metadata .json file name (SACCHARIS output). If not given, user is prompted for text entry of metadata .json file name instead.
+#' @param tree_name Argument for text filepath to .tree file name (SACCHARIS output). If not given, user is prompted for text entry of .tree file name instead.
+#' @param out_dir Argument for text folderpath output CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx to.
 #'
 #' @importFrom jsonlite fromJSON
 #' @importFrom ape read.tree
@@ -12,11 +13,18 @@
 #' @importFrom knitr kable
 #' @importFrom dplyr tibble
 #' @importFrom magrittr %>%
+#' @importFrom utils write.csv
 #'
 #' @examples
+#' \dontrun{
 #' A_load_data()
 #' test_data.json
 #' GH16_characterized.tree
+#' }
+#' @examples
+#' \dontrun{
+#' A_load_data("PL9_CHARACTERIZED_ALL_DOMAINS.json", "PL9_CHARACTERIZED_ALL_DOMAINS_FASTTREE.tree")
+#' }
 #' @returns
 #' CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx. Exported data table containing information from cazy.org for each sequence.
 #' @export
@@ -27,7 +35,9 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   if (is.null(json_file)) {
     json_file <- readline(prompt = "Enter the name of your SACCHARIS JSON file: ")
   }
-  cazy_json <<- jsonlite::fromJSON(json_file) # reads in json file
+  #print(json_file)/
+  #print(dir(getwd()))
+  cazy_json <- jsonlite::fromJSON(json_file) # reads in json file
   Cazy_table_edited <- as.data.frame(do.call(rbind, cazy_json)) # assigns the json file to a data frame
   Cazy_table_edited$genbank <- rownames(Cazy_table_edited) # this retains the multiple-domain assignments to the genbank ID
 

@@ -2,6 +2,7 @@
 
 export(A_load_data)
 export(B_plots_all)
+export(C_load_and_plot_all)
 importFrom(RColorBrewer,brewer.pal)
 importFrom(RColorBrewer,display.brewer.all)
 importFrom(ape,read.tree)
@@ -31,3 +32,4 @@ importFrom(magicfor,magic_for)
 importFrom(magicfor,magic_result_as_dataframe)
 importFrom(magrittr,"%>%")
 importFrom(stringr,str_remove)
+importFrom(utils,write.csv)
