@@ -185,7 +185,7 @@ B_plots_all <- function(out_dir=getwd()) {
 
   p11=gheatmap(p10, df_for_tree[, "domain", drop=F], offset=0.4, width=.1, hjust=0,
                colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "Domain")+
-    scale_fill_manual(values=Phylo_col)
+    scale_fill_manual("Domain", values=Phylo_col)
 
   p12<- p11 + ggnewscale::new_scale_fill()
 
