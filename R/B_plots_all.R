@@ -138,7 +138,7 @@ B_plots_all <- function(out_dir=getwd()) {
 
   p9=gheatmap(p8, df_for_tree2[, "ec_num", drop=F], offset=2, width=0.1, hjust=0,
               colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "ECNo")+
-    scale_fill_manual(values=ECNo_col)
+    scale_fill_manual("ECNo", values=ECNo_col)
 
   plot(p9)
 
@@ -192,7 +192,7 @@ B_plots_all <- function(out_dir=getwd()) {
   ## NOTE for p13: the offset value may need to be adjusted manually depending on the size of the tree
   p13=gheatmap(p12, df_for_tree[, "ec_num", drop=F], offset=1.4, width=0.1, hjust=0,
                colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "ECNo")+
-    scale_fill_manual(values=ECNo_col)
+    scale_fill_manual("ECNo", values=ECNo_col)
 
   plot(p13)
 
