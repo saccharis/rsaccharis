@@ -83,7 +83,7 @@ B_plots_all <- function(out_dir=getwd()) {
 
   p2=gheatmap(p1, df_for_tree2[, "domain", drop=F], offset=1.5, width=.05, hjust=0,
               colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "Domain") +
-    scale_fill_manual(values=Phylo_col_do)
+    scale_fill_manual("Domain", values=Phylo_col_do)
 
   plot(p2)
 
@@ -104,7 +104,7 @@ B_plots_all <- function(out_dir=getwd()) {
 
   p4=gheatmap(p3, df_for_tree2[, "domain", drop=F], offset=1.5, width=.05, hjust=0,
               colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "Domain")+
-    scale_fill_manual(values=Phylo_col_do)
+    scale_fill_manual("Domain", values=Phylo_col_do)
 
   plot(p4)
 
@@ -132,7 +132,7 @@ B_plots_all <- function(out_dir=getwd()) {
 
   p7=gheatmap(p6, df_for_tree2[, "domain", drop=F], offset=0.4, width=.1, hjust=0,
               colnames = FALSE, colnames_offset_y = .25, color="black", legend_title = "Domain")+
-    scale_fill_manual(values=Phylo_col_do)
+    scale_fill_manual("Domain", values=Phylo_col_do)
 
   p8<- p7 + ggnewscale::new_scale_fill()
 
