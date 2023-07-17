@@ -37,7 +37,7 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   }
   #print(json_file)/
   #print(dir(getwd()))
-  cazy_json <- jsonlite::fromJSON(json_file) # reads in json file
+  cazy_json <<- jsonlite::fromJSON(json_file) # reads in json file
   Cazy_table_edited <- as.data.frame(do.call(rbind, cazy_json)) # assigns the json file to a data frame
   Cazy_table_edited$genbank <- rownames(Cazy_table_edited) # this retains the multiple-domain assignments to the genbank ID
 
