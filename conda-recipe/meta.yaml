@@ -1,7 +1,7 @@
 {% set version = "1.0.2" %}
   {% set name = "rsaccharis" %}
   {% set build_number = 0%}
-  {% set filehash = "todo: need to update"%}
+  {% set filehash = "9515AFB07C3738F3CB33300099316F3EAFB4179B7FFEFE602D241D4F040F1D1D"%}
 
 package:
   name: '{{ name|lower }}'
