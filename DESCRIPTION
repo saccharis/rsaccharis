@@ -1,7 +1,7 @@
 Package: rsaccharis
 Type: Package
 Title: Annotation of Phylogenetic Trees Generated Using SACCHARIS v2
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person("Greta", "Reintjes", email = "greta.reintjes@mpi-bremen.de", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7085-4683")),
     person("Kristin", "Low", email = "kristin.low@agr.gc.ca", role = c("aut"), comment = c(ORCID = "0000-0003-1093-0044")),

@@ -1,7 +1,7 @@
 {% set version = "1.0.1" %}
   {% set name = "rsaccharis" %}
   {% set build_number = 0%}
-  {% set filehash = "B2CB7E73AF374A68C9D955FC8BED8AD67A1DE96A262220F4DC7CBC0C73F86E7A"%}
+  {% set filehash = "D564381459A8158E027D2048443AD82C30B476EBEAFA193B060E42F74E9FF501"%}
 
 package:
   name: '{{ name|lower }}'
@@ -38,7 +38,8 @@ requirements:
 
 test:
   commands:
-    - '$R "'
+#    - 'R -e "library(''{{ name }}'')"'
+#    - 'Rscript  "library(rsaccharis)"'
 
 about:
   home: 'https://github.com/saccharis/rsaccharis'

@@ -47,6 +47,7 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   if (is.null(tree_name)) {
     tree_name <- readline(prompt = "Enter the name of your SACCHARIS tree file: ")
   }
+  tree_stem = basename(tree_name)
   myTREE <<- ape::read.tree(file = tree_name)    # get node names
   tree_tip_names <<- myTREE$tip.label    # get tip names from the tree
   tree_tip_names <- as.matrix(tree_tip_names)
@@ -85,7 +86,7 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   if (!is.null(out_dir)) {
     setwd(out_dir)
   }
-  write.csv(final_ord, file=sprintf(paste("CAZY_TABLE_FINAL_%s_", currentDate, ".csv", sep=""), substr(tree_name,1,nchar(tree_name)-5)), row.names = TRUE)
+  write.csv(final_ord, file=sprintf(paste("CAZY_TABLE_FINAL_%s_", currentDate, ".csv", sep=""), substr(tree_stem,1,nchar(tree_stem)-5)), row.names = TRUE)
 
   # for loop to copy from cazy final to tip names
   df_for_tree <<- df_tree # contains NAs need to remove or change to USER sequence
