@@ -8,12 +8,12 @@
 #'
 #' @export
 
-C_load_and_plot_all <- function(input_json, input_tree, output_folder) {
+C_load_and_plot_all <- function(input_json, input_tree, output_folder, root=NULL) {
     data_folder <- basename(input_json)
     if (!dir.exists(data_folder)) {
         data_folder <- getwd()
     }
     setwd(data_folder)
-    rsaccharis::A_load_data(input_json, input_tree, output_folder)
+    rsaccharis::A_load_data(input_json, input_tree, output_folder, root)
     rsaccharis::B_plots_all(output_folder)
 }

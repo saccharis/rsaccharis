@@ -30,7 +30,7 @@
 #' @export
 #'
 
-A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
+A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL, root=NULL){
   #### load JSON metadata file
   if (is.null(json_file)) {
     json_file <- readline(prompt = "Enter the name of your SACCHARIS JSON file: ")
@@ -49,6 +49,9 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL){
   }
   tree_stem = basename(tree_name)
   myTREE <<- ape::read.tree(file = tree_name)    # get node names
+  if (!is.null(root)) {
+    myTREE <<- root(myTREE, "OUT0000000")
+  }
   tree_tip_names <<- myTREE$tip.label    # get tip names from the tree
   tree_tip_names <- as.matrix(tree_tip_names)
   colnames(tree_tip_names)="genbank"
