@@ -5,6 +5,7 @@
 #' @param json_file Argument for text filepath to metadata .json file name (SACCHARIS output). If not given, user is prompted for text entry of metadata .json file name instead.
 #' @param tree_name Argument for text filepath to .tree file name (SACCHARIS output). If not given, user is prompted for text entry of .tree file name instead.
 #' @param out_dir Argument for text folderpath output CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx to.
+#' @param root Argument for optional rooting of the tree. This should be a tip label present in the tree. If left unfilled, the tree will be unrooted.
 #'
 #' @importFrom jsonlite fromJSON
 #' @importFrom ape read.tree

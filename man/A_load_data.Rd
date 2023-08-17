@@ -4,7 +4,7 @@
 \alias{A_load_data}
 \title{Load Data Files}
 \usage{
-A_load_data(json_file = NULL, tree_name = NULL, out_dir = NULL)
+A_load_data(json_file = NULL, tree_name = NULL, out_dir = NULL, root = NULL)
 }
 \arguments{
 \item{json_file}{Argument for text filepath to metadata .json file name (SACCHARIS output). If not given, user is prompted for text entry of metadata .json file name instead.}
@@ -12,6 +12,8 @@ A_load_data(json_file = NULL, tree_name = NULL, out_dir = NULL)
 \item{tree_name}{Argument for text filepath to .tree file name (SACCHARIS output). If not given, user is prompted for text entry of .tree file name instead.}
 
 \item{out_dir}{Argument for text folderpath output CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx to.}
+
+\item{root}{Argument for optional rooting of the tree. This should be a tip label present in the tree. If left unfilled, the tree will be unrooted.}
 }
 \value{
 CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx. Exported data table containing information from cazy.org for each sequence.

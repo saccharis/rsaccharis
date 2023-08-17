@@ -5,6 +5,8 @@
 #' @param input_json Argument for text filepath to metadata .json file name (SACCHARIS output).
 #' @param input_tree Argument for text filepath to .tree file name (SACCHARIS output).
 #' @param output_folder Argument for text folderpath output CAZY_TABLE_FINAL_GHxx_characterized_DATE.xlsx to.
+#' @param root Argument for optional rooting of the tree. This should be a tip label present in the tree. If left unfilled, the tree will be unrooted.
+
 #'
 #' @export
 

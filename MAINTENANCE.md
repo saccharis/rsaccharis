@@ -19,6 +19,7 @@ main git branch.
 - Run `devtools::document()` to update documentation
 - Run `devtools::check()` to check there are no errors while building the package, then fix any errors or warnings
 - Once the package is free of errors and warnings, run `build(manual=TRUE)` to create the rsaccharis_\<ver\>.tar.gz file
+- The new package file (which will be uploaded to github) will be located in the folder above the project directory.
 
 ## Uploading to github
 - Before uploading to GitHub, make sure the changes you packaged in R are actually commited to the git repo, since the 
