@@ -51,7 +51,9 @@ A_load_data <- function(json_file=NULL, tree_name=NULL, out_dir=NULL, root=NULL)
   tree_stem = basename(tree_name)
   myTREE <<- ape::read.tree(file = tree_name)    # get node names
   if (!is.null(root)) {
-    myTREE <<- root(myTREE, "OUT0000000")
+    # need to use edgelabel=TRUE when rerooting trees with bootstrap values as node labels (e.g. newick format with bootstrap values)
+    # For full explanation, see https://doi.org/10.1093/molbev/msx055
+    myTREE <<- ape::root(myTREE, "OUT0000000", edgelabel=TRUE)
   }
   tree_tip_names <<- myTREE$tip.label    # get tip names from the tree
   tree_tip_names <- as.matrix(tree_tip_names)
