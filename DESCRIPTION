@@ -1,7 +1,7 @@
 Package: rsaccharis
 Type: Package
 Title: Annotation of Phylogenetic Trees Generated Using SACCHARIS v2
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: c(
     person("Greta", "Reintjes", email = "greta.reintjes@mpi-bremen.de", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7085-4683")),
     person("Kristin", "Low", email = "kristin.low@agr.gc.ca", role = c("aut"), comment = c(ORCID = "0000-0003-1093-0044")),
@@ -16,7 +16,7 @@ RoxygenNote: 7.2.3
 Imports: jsonlite, ape, stringr, magicfor, knitr, dplyr, magrittr,
         RColorBrewer, ggnewscale, ggplot2, ggtree
 NeedsCompilation: no
-Packaged: 2023-07-15 20:13:02 UTC; AlexF
+Packaged: 2023-09-14 20:06:23 UTC; AlexF
 Author: Greta Reintjes [aut, cre] (<https://orcid.org/0000-0001-7085-4683>),
   Kristin Low [aut] (<https://orcid.org/0000-0003-1093-0044>),
   Jeff Tingley [aut],
