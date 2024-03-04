@@ -18,7 +18,7 @@ Option 2:
 Option 3:
 - You can install the latest version of the repository by using the devtools package in r and the 
   following command: 
-  `devtools::install_github(saccharis/rsaccharis)`
+  `devtools::install_github("saccharis/rsaccharis")`
   This will automatically download and build the package using the latest version of the main branch 
   of the git repo. BEWARE that this is not guaranteed to be stable and functional.
 
