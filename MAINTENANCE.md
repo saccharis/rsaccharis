@@ -35,12 +35,20 @@ Reference documentation [here](https://docs.conda.io/projects/conda-build/en/lat
 - Update the meta.yaml file for conda builds with any dependency changes (and any other build changes) and **update the 
   correct version number** and the SHA256 hash at the top of the file with the hash of the latest tar.gz archive uploaded
   to GitHub.
+- Make sure you have the 'r' channel added to your conda channel list. You can add it at lowest priority 
+  with `conda config --append channels r` if it's not present already. Errors saying that r dependencies aren't found 
+  will result from not having the r channel in your channel list.
 - Test that the conda package can be built locally. You can do this simply by running `conda build .` from the 
   rsaccharis folder in a terminal with conda set up.
+  - (OPTIONAL) Install [boa](https://boa-build.readthedocs.io/en/latest/getting_started.html) and build using 
+    `conda mambabuild .` instead, which builds faster.
+  - NOTE ABOUT SOLVER FAILURE: I had issues with the build solver failing to find compatible packages. I solved this 
+    by pinning r_base to a specific version in conda_build_config.yaml, because according to 
+    [this hithub issue](https://github.com/mamba-org/mamba/issues/2679), conda build has a hardcoded special case to 
+    use an older version of R, rather than the most compatible version.
 - Once successfully built, you can install the newly created local package with `conda install rsaccharis --use-local`, 
   ideally in a fresh environment.
 - Test that the newly installed package is working properly in the test conda environment.
-
 
 ## Updating for  bioconda
 Reference documentation [here](https://bioconda.github.io/contributor/index.html).
