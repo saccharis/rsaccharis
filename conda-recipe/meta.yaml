@@ -22,6 +22,17 @@ build:
 requirements:
   host:
     - r-base
+    - r-jsonlite
+    - r-ape
+    - r-stringr
+    - r-magicfor
+    - r-knitr
+    - r-dplyr
+    - r-magrittr
+    - r-rcolorbrewer
+    - r-ggnewscale
+    - r-ggplot2
+    - bioconductor-ggtree
   run:
     - r-base
     - r-jsonlite
@@ -38,8 +49,7 @@ requirements:
 
 test:
   commands:
-#    - 'R -e "library(''{{ name }}'')"'
-#    - 'Rscript  "library(rsaccharis)"'
+    - 'Rscript -e "library(rsaccharis)"'
 
 about:
   home: 'https://github.com/saccharis/rsaccharis'
