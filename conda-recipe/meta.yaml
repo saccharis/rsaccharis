@@ -1,5 +1,5 @@
 {% set version = "1.0.4" %}
-  {% set name = "rsaccharis" %}
+  {% set name = "r-saccharis" %}
   {% set build_number = 0%}
   {% set filehash = "F02EC69008F688440D7D4230751D1A8C9501F24F2382F399317591C4005DF19F"%}
 
