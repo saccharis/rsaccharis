@@ -7,7 +7,7 @@ in the R statistical computing language.
 Option 1 (TBD, we haven't uploaded rsaccharis to bioconda yet, so this doesn't work right now!):
 - The rsaccharis package will be packaged for conda and distributed on the bioconda channel. 
   If you install the main SACCHARIS tool, rsaccharis will be automatically installed once this is 
-  working. If you want to install rsaccharis on it's own, simply use `conda install rsaccharis`.
+  working. If you want to install r-saccharis on it's own, simply use `conda install r-saccharis`.
 
 Option 2:
 - You can install the latest R package by going to the releases section on the GitHub sidebar, downloading the 
