@@ -12,7 +12,7 @@ Description: This package will use metadata .json and .tree files output from SA
     Highly customizable, as the formatting of the tree is done using ggplot2. Of course plotting functions can easily be manipulated as desired.
     To use, call A_load_data() and B_plots_all() and follow prompts. Our default plots used for publication are domain_ECno_numeric.
 Encoding: UTF-8
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports: jsonlite, ape, stringr, knitr, dplyr, magrittr,
         RColorBrewer, ggnewscale, ggplot2, ggtree
 NeedsCompilation: no
