@@ -10,7 +10,6 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom ape read.tree root
 #' @importFrom stringr str_remove
-#' @importFrom magicfor magic_for magic_result_as_dataframe
 #' @importFrom knitr kable
 #' @importFrom dplyr tibble
 #' @importFrom magrittr %>%

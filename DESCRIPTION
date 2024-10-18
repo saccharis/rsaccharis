@@ -1,7 +1,7 @@
 Package: rsaccharis
 Type: Package
 Title: Annotation of Phylogenetic Trees Generated Using SACCHARIS v2
-Version: 1.0.4
+Version: 1.0.5
 Authors@R: c(
     person("Greta", "Reintjes", email = "greta.reintjes@mpi-bremen.de", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7085-4683")),
     person("Kristin", "Low", email = "kristin.low@agr.gc.ca", role = c("aut"), comment = c(ORCID = "0000-0003-1093-0044")),
@@ -13,7 +13,7 @@ Description: This package will use metadata .json and .tree files output from SA
     To use, call A_load_data() and B_plots_all() and follow prompts. Our default plots used for publication are domain_ECno_numeric.
 Encoding: UTF-8
 RoxygenNote: 7.2.3
-Imports: jsonlite, ape, stringr, magicfor, knitr, dplyr, magrittr,
+Imports: jsonlite, ape, stringr, knitr, dplyr, magrittr,
         RColorBrewer, ggnewscale, ggplot2, ggtree
 NeedsCompilation: no
 Packaged: 2023-09-14 20:06:23 UTC; AlexF
