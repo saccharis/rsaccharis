@@ -1,4 +1,9 @@
 # rsaccharis
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/r-saccharis/README.html)
+[![Anaconda-Server Badge](https://anaconda.org/bioconda/r-saccharis/badges/version.svg)](https://anaconda.org/bioconda/r-saccharis)
+[![Anaconda-Server Badge](https://anaconda.org/bioconda/r-saccharis/badges/latest_release_date.svg)](https://anaconda.org/bioconda/r-saccharis)
+[![Anaconda-Server Badge](https://anaconda.org/bioconda/r-saccharis/badges/license.svg)](https://anaconda.org/bioconda/r-saccharis)
+
 A rendering package for creating phylogenetic trees from [SACCHARIS 2](https://github.com/saccharis/SACCHARIS_2) .json and .tree files,
 in the R statistical computing language.
 
